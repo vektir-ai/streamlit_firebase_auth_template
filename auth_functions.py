@@ -93,7 +93,6 @@ def sign_in(email:str, password:str) -> None:
         print(error)
         st.session_state.auth_warning = 'Error: Please try again later'
 
-
 def create_account(email:str, password:str) -> None:
     try:
         # Create account (and save id_token)
@@ -116,7 +115,6 @@ def create_account(email:str, password:str) -> None:
         print(error)
         st.session_state.auth_warning = 'Error: Please try again later'
 
-
 def reset_password(email:str) -> None:
     try:
         send_password_reset_email(email)
@@ -132,11 +130,9 @@ def reset_password(email:str) -> None:
     except Exception:
         st.session_state.auth_warning = 'Error: Please try again later'
 
-
 def sign_out() -> None:
     st.session_state.clear()
     st.session_state.auth_success = 'You have successfully signed out'
-
 
 def delete_account(password:str) -> None:
     try:
