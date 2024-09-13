@@ -17,7 +17,7 @@ if 'user_info' not in st.session_state:
     # Sign In
     if do_you_have_an_account == 'Yes' and auth_form.form_submit_button(label='Sign In',use_container_width=True,type='primary'):
         with auth_notification, st.spinner('Signing in'):
-            auth_functions.sign_in(email,password)
+            auth_functions.sign_in(email, password)
 
     # Create Account
     elif do_you_have_an_account == 'No' and auth_form.form_submit_button(label='Create Account',use_container_width=True,type='primary'):
